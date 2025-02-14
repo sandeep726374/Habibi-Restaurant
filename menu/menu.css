@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    color: #FCE5B0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url("https://img.freepik.com/free-photo/solid-brown-concrete-textured-wall_53876-124585.jpg?t=st=1739533550~exp=1739537150~hmac=fa15e442d02e51bef8c44c1750c83dcb073a3fc79380beedaa06446718d98135&w=740") no-repeat center center/cover;
+}
+
+.menu-container {
+    width: 97%;
+    height: 97vh;
+    margin: 5px;
+    padding: 20px;
+    border: 3px double #FCE5B0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+    overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Menu Item Box */
+.menu-item-box {
+    border: 1px solid #FDF2D6;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+/* Image */
+.img {
+    height: 50px;
+    width: 50px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+/* Menu Item Description */
+.menu-item-des {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Name */
+.menu-item-name {
+    font-size: 16px;
+    font-weight: 500;
+    margin-right: 5px;
+    /* Ensuring name and price are closer */
+}
+
+/* Price & Cart */
+.price-cart {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    /* Reduced gap between price and cart */
+}
+
+/* Price */
+.menu-item-price {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/* Cart Icon */
+.cart {
+    font-size: 20px;
+}
+
+h3 {
+    margin: 4px 0;
+    /* Reduced margin from top and bottom */
+    padding: 2px 0;
+    /* Reduced padding from top and bottom */
+    font-size: 18px;
+    /* Keeping the font size consistent */
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media screen and (min-width: 768px) {
+    .menu-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .head-menu{
+        margin: 0;
+        padding: 0;
+    }
+
+    .menu-item-box {
+        flex: 1 1 250px;
+        max-width: 200px;
+        padding: 12px;
+        border-radius: 12px;
+        border: 2px solid #FCE5B0;
+        transition: 0.3s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .menu-item-box:hover {
+        border-color: white;
+        transform: scale(1.05);
+        box-shadow: 0 0 1rem #FDF2D6;
+    }
+
+    .img {
+        height: 120px;
+        width: 120px;
+        margin-bottom: 10px;
+    }
+
+    .cart {
+        font-size: 22px;
+    }
+
+    .menu-item-des {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 2px;
+
+        /* Tighter spacing */
+    }
+
+    .price-cart {
+        justify-content: center;
+        width: 100%;
+        margin-top: 5px;;
+        gap: 2px;
+        /* Reduced spacing */
+    }
+
+    .menu-item-name {
+        font-size: 14px;
+    }
+
+    .meni-item-price {
+        font-size: 18px;
+    }
+}
